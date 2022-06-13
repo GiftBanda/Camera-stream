@@ -77,7 +77,7 @@ const initStreamingSession = async () => {
         throw error
     }
 
-    kinesisVideoArchivedContent.endpoint = new AWS.Endpoint(dataEndpoint);
+    kinesisVideoArchivedContent.endpoint = new AWS.Endpoint(dataEndPoint);
 
     let streamingSessionURLOne;
 
@@ -100,9 +100,9 @@ const initStreamingSession = async () => {
 }
 
 // Play function
-const PlayOne = async () => {
+const playOne = async () => {
     const streamingSessionURLOne = await initStreamingSession()
     initPlayer(streamingSessionURLOne)
 }
 
-(async () => await PlayOne());
+(async () => await playOne())();
